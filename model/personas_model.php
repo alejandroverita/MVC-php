@@ -20,7 +20,10 @@ public function __construct() {
 
 public function get_personas(){
 
-    $consulta=$this->db->query("SELECT * FROM datos_usuarios");
+    //conectar con archivo paginacion para traer la sentencia del tamaño de las paginas
+    require ("paginacion.php");
+
+    $consulta=$this->db->query("SELECT * FROM datos_usuarios LIMIT $empezar_desde, $tamagno_paginas");
 
     //FETCH ASSOC para leer un array asociativo
     while($filas=$consulta->fetch(PDO::FETCH_ASSOC)){

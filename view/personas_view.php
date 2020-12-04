@@ -7,9 +7,11 @@
     
 </head>
 <body>
-    
-<table>
-<tr><td>NOMBRE DEL ARTÍCULO </td>
+<?php
+
+require("model/paginacion.php");
+
+?>
 
 <h1>CRUD<span class="subtitulo">Create Read Update Delete</span></h1>
 
@@ -38,8 +40,8 @@
 
 <!-- pasando id por la url con ?nombre=valor- abrir php y pasarle que me escriba en la url el propiedad del objeto persona que se encuente evaluando el id -->
 
-      <td class="bot"><a href="borrar.php?id=<?php echo $persona->ID?>"><input type='button' name='del' id='del' value='Borrar'></a></td>
-      <td class='bot'><a href="editar.php?id=<?php echo $persona->ID?> & nom=<?php echo $persona->NOMBRE?> & ape=<?php echo $persona->APELLIDO?> & dir= <?php echo $persona->DIRECCION?>">
+      <td class="bot"><a href="borrar.php?id=<?php echo $persona["ID"]?>"><input type='button' name='del' id='del' value='Borrar'></a></td>
+      <td class='bot'><a href="editar.php?id=<?php echo $persona["ID"]?> & nom=<?php echo $persona["NOMBRE"]?> & ape=<?php echo $persona["APELLIDO"]?> & dir= <?php echo $persona["DIRECCION"]?>">
       <input type='button' name='up' id='up' value='Actualizar'></a></td>
     </tr> 
 
