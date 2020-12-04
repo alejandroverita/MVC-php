@@ -9,7 +9,7 @@ private $productos;
 public function __construct() {
 
     //conectar con BBDD
-    require_once("conectar.php");
+    require_once("model/conectar.php");
 
     //especificar la variable donde quiero almacenar la conexion que nos va a devolver el metodo
     $this->db=conectar::conexion();
